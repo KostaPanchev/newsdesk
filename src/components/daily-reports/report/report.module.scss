@@ -1,0 +1,251 @@
+@import '../../../sass-variables.scss';
+
+.report {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    // padding: 1em;
+    background-color: #fff;
+    margin-bottom: 1.5em;
+    transition: all .2s ease;
+    border-radius: .3em;
+    box-shadow: $shadow1;
+    border: 1px solid $bgColor;
+    overflow: hidden;
+    // padding: .2em;
+}
+
+.reportEditMode {
+    composes: report;
+    background-color: #fff;
+    box-shadow: $shadow4;
+    max-width: 900px;
+    margin: 2em auto;
+    // border-radius: .5em;
+    overflow: hidden;
+    .header {
+        background-color: $dailyReportsColor;
+        color: #fff;
+        h3 {
+            font-size: 1.1em;
+            color: #fff;
+        }
+    }
+}
+
+.reportLocked {
+    composes: report;
+    .header {
+        background-color: rgba($blueGrey, .2);
+    }
+    .categoryTitle {
+        opacity: .5;
+    }
+    .cardContentText {
+        opacity: .5;
+    }
+    // border: 1px solid red;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .7rem 3.5rem;
+    border-bottom: 1px solid $bgColor;
+    background-color: lighten($blueGrey, 35%);
+    transition: all .2s ease;
+}
+
+.headerFilled {
+    composes: header;
+    background-color: $dailyReportsColor
+}
+
+.headerLocked {
+    composes: header;
+
+}
+
+.categoryTitle {
+        margin: 0;
+        padding: 0;
+        // color: #fff;
+        color: $blueGrey;
+        font-size: 1.1em;
+        flex: 1;
+        font-weight: 500;
+        letter-spacing: 0.65px;
+        // font-size: .9em;
+        transition: all .2s ease;
+}
+
+.LoaderWritingWrapper {
+    margin-right: 1em;
+}
+.title {
+    display: block;
+}
+.titleNote {
+    font-size: .8em;
+    display: inline-block;
+    margin-left: 1rem;
+    font-weight: 400;
+    &:before {
+        content: '|';
+        padding-right: 1rem;
+        display: inline-block;
+    }
+}
+.pinIcon {
+    position: absolute;
+    // top: 0;
+    left: 1em;
+    display: inline-block;
+    margin-right: 1em;
+    svg {
+        fill: $blueGrey
+    }
+}
+
+.loader {
+    width: 1em;
+    margin-right: 1em;
+    display: flex;
+    // justify-content: flex-;
+    // display: inline-block;
+}
+
+.lockedWrapper {
+    padding: 0 1em;
+    margin-top: 1em;
+}
+
+.locked {
+    border-top: 1px solid rgba($blueGrey, .2);
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    color: $blueGrey;
+    display: flex;
+    align-items: center;
+    .lockedIcon {
+        display: inline-block;
+        margin-right: .5em;
+    }
+    svg {
+        width: 1.2em;
+        position: relative;
+        top: .1em;
+        fill: $blueGrey;
+    }
+}
+
+.lockedBy {
+    margin-left: 1em;
+    font-size: .8em;
+    font-weight: 400;
+}
+
+.body {
+    padding: .7rem 2.5rem;
+}
+
+.cardContent {
+    
+    font-size: .9em;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    
+}
+
+.cardContentText {
+    padding: 1rem;
+    cursor: pointer;
+    &:hover {
+        border-radius: .5em;
+        background-color: rgba($blueGrey, .1);
+    }
+}
+
+.cardContentTextLocked {
+    composes: cardContentText;
+    cursor: not-allowed;
+
+}
+
+.form {
+    padding: .5em;
+    textarea {
+        background-color: $bgColor;
+        border: none;
+        border-radius: .3em;
+        padding: 1rem;
+        line-height: 1.4;
+        width: 100%;
+        min-height: 400px;
+    }
+}
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    cursor: pointer;
+    transition: all .2s ease;
+    svg {
+        width: 1.5em;
+        fill: darken($bgColor, 10%);
+    }
+    &:hover {
+        transform: scale(1.1);
+        border-radius: .5em;
+        // background-color: rgba($blueGrey, .1);
+        svg {
+            fill: $dailyReportsColor;
+        }
+    }
+}
+.btnWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5em;
+    // margin-bottom: 1em;
+}
+
+.templateBtnWrapper {
+    // background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: .5rem;
+}
+
+.templateBtn {
+    font-size: .7rem;
+    text-transform: uppercase;
+    display: inline-block;
+    // background-color: red;
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+    color: $blueGrey;
+    padding: .5rem 1.3rem;
+    cursor: pointer;
+    background-color: $bgColor;
+    border-radius: 20px;
+    &:hover {
+        background-color: $bgColor;
+    }
+}
+
+.okBtn {
+    background-color: $blueGrey;
+    display: inline-block;
+    font-size: .8em;
+    color: #fff;
+    border-radius: 2em;
+    padding: .5em 2em;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+

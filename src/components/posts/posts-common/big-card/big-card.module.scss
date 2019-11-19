@@ -1,0 +1,178 @@
+@import '../../../../sass-variables.scss';
+
+.card {
+    background-color: #fff;
+    transition: all .2s ease;
+}
+
+.cardIsPublished {
+    composes: card;
+    opacity: .5;
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.header {
+    padding: .6em 2em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.importedCardHeader {
+    composes: header;
+    background-color: $importedCardColor
+}
+
+.createdCardHeader {
+    composes: header;
+    background-color: $createdCardColor
+}
+
+.headerTime {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.mainCategory {
+    
+}
+
+.body {
+    // display: flex;
+}
+
+.mainInfo {
+    // flex: 2;
+    // padding: 2em;
+    // display: flex;
+    // flex-direction: column;
+}
+
+.title {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 1em;
+    .titleWarnIcon {
+    }
+    svg {
+        width: .8em;
+        margin-right: .5em;
+        fill: #D0021B;
+    }
+}
+.descriptionWrapper {
+    font-size: .9em;
+    margin-bottom: 1em;
+   
+    
+    position: relative;
+    padding-bottom: 2rem;
+    &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: 2rem;
+        left: 0;
+        width: calc(100% - 1rem);
+        height: 3rem;
+        background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,.8) 36%, rgba(255,255,255,1) 100%);
+    }
+}
+
+.description {
+   overflow-x: auto;
+   max-height: 14rem;
+   padding-bottom: 2.5rem;
+   padding-right: 1rem;
+}
+
+.bylineWrapper {
+    margin-top: auto;
+    padding-top: 1em;
+    border-top: 1px solid $bgColor;
+    font-style: italic;
+    font-weight: 300;
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: .5em;
+        font-size: 1.2em;
+        // fill: $blueGrey;
+    }
+}
+
+.options {
+    // text-transform: uppercase;
+    font-size: .9em;
+    // flex: 1;
+    // padding: 2em;
+    // background-color: $bgColor;
+}
+
+.importedCardOptions {
+    composes: options;
+}
+.createdCardOptions {
+    composes: options;
+    padding-bottom: 6em;
+}
+
+// .optionsList {
+
+// }
+
+.optionItem {
+    display: flex;
+    margin-bottom: .7em;
+
+} 
+.label {
+    font-weight: 300;
+    color: $blueGrey;
+    width: 6em;
+}
+
+.value {
+    color: $blueGrey;
+}
+
+.iconsList {
+    display: flex;
+}
+
+.optionsIcon {
+    color: rgba($blueGrey, .4);
+    margin-right: .5em;
+    display: none;
+    svg {
+        fill: rgba($blueGrey, .4);
+    }
+}
+
+.optionsIconActive {
+    composes: optionsIcon;
+    display: block;
+    color: $blueGrey;
+            svg {
+                fill: $blueGrey;
+            }
+}
+
+.addNoteIcon {
+    display: inline-block;
+    // background-color: $bgColor;
+    border-radius: .3em;
+    margin-bottom: .3rem;
+    cursor: pointer;
+    justify-content: center;
+    // background-color: grey;
+    svg {
+        font-size: 1.4rem;
+        fill: $mainColor;
+    }
+}

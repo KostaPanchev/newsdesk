@@ -1,0 +1,37 @@
+@import '../../../../sass-variables.scss';
+
+.optionsList {
+    display: flex;
+    margin-bottom: .5em;
+}
+
+.option {
+    font-size: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
+    transition: all .1s ease;
+    color: rgba($blueGrey, .5);
+    margin-right: .2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        fill: rgba($blueGrey, .4);
+    }
+    &:hover {
+        background-color: #fff;
+        // color: $blueGrey;
+        cursor: pointer;
+    }
+}
+
+.optionActive {
+    composes: option;
+    color: $blueGrey;
+    // background-color: #fff;
+    // box-shadow: $shadow1;
+    border-radius: .2em;
+    svg {
+        fill: $blueGrey;
+    }
+}

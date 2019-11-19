@@ -1,0 +1,15 @@
+@import '../../sass-variables.scss';
+
+.wrapper {
+    background-color: #fff;
+    padding: 3em;
+    text-align: center;
+    width: 80%;
+    margin: 2em auto;
+    max-width: 900px;
+}
+
+.notFound404 {
+    font-size: 6em;
+    font-weight: 200;
+}

@@ -1,0 +1,199 @@
+@import '../../sass-variables.scss';
+
+.tableWrapper {
+    position: relative;
+    height: 90vh;
+    width: auto;
+    max-width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: scroll;
+    background-color: darken($bgColor, 5%);
+    // background-color: #fff;
+    // box-shadow: $shadow1;
+    border: 1em solid darken($bgColor, 5%);
+}
+
+.postsTable {
+    margin: 0 auto;
+    background-color: #fff;
+    width: auto;
+    max-width: 100%;
+    tr {
+        height: 1px;
+        &:nth-child(odd) {
+            td:not(:first-child) {
+                background-color: lighten($bgColor, 4%);
+
+            }
+        }
+    }
+
+    th {
+        height: inherit;
+        position: relative;
+        z-index: 4;
+        font-weight: 400;
+        border: 1px solid #fff;
+        color: #fff;
+        position: sticky;
+        top: -1px;
+        background-color: $blueGrey;
+        // padding: 1em;
+        &:first-child {
+            padding: 0 1.8em;
+            svg {
+                fill: #fff;
+                width: 24px;
+            }
+            // z-index: 4;
+            // position: sticky;
+            // left: -1px;
+        }
+    }
+    
+    td {
+        vertical-align: top;
+        z-index: 1;
+        border: 1px solid $bgColor;
+        min-width: 170px;
+        width: 180px;
+        max-width: 200px;
+
+        &:first-child {
+            border-right: 1px solid $bgColor;
+            background-color: rgba(255, 255, 255, 0.767);
+            position: sticky;
+            left: -1px;
+            padding: .5em;
+            max-width: 90px;
+            width: 90px;
+            font-size: .8em;
+            text-align: center;
+            min-width: 10px;
+        }
+    }
+}
+
+.thCell {
+    padding: 1em .5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.thCellDefault {
+    composes: thCell;
+}
+
+.thCellWeek {
+    composes: thCell;
+    
+}
+
+
+
+.tableDefaultView {
+    composes: postsTable;
+    th {
+        &:first-child {
+            background-color: $defaultViewColor;
+        }
+    }
+
+    td {
+        &:first-child {
+            color: $blueGrey;
+            // color: #fff;
+        }
+    }
+}
+
+.tableWeekView {
+    composes: postsTable;
+    th {
+        &:first-child {
+            background-color: $weekViewColor;
+        }
+    }
+
+    td {
+        &:first-child {
+            color: $blueGrey;
+        }
+    }
+}
+
+.currentDay {
+    background-color: $weekViewColor !important;
+}
+
+.headContorols {
+    // margin-top: -.2em;
+    // color: black;
+    margin-top: auto;
+    padding: .5em;
+    display: flex;
+    padding-bottom: 0;
+    justify-content: center;
+
+    a {
+        margin: 0 .7em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all .2s ease;
+
+        &:hover {
+            // color: #fff;
+            transform: scale(1.1);
+        }
+
+        svg {
+            width: 16px;
+            fill: #fff
+        }
+    }
+
+    .priorityLabel {
+        margin: 0 .7em;
+        display: inline-block;
+        padding: .2em .5em;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 15px;
+        font-size: .7em;
+        background-color: #fff;
+        color: $blueGrey;
+        border-radius: 1em;
+    }
+}
+
+.headTitle {
+    padding: 0 .5em;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    line-height: 20px;
+    
+}
+
+.headSubtitle {
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0 .5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.514);
+    margin-top: .3em;
+    padding-top: .3em;
+    font-size: 14px;
+    letter-spacing: 0.58px;
+    line-height: 16px;
+}
+
+// th.posts-table__current-day {
+//     background-color: $weekViewColor;
+// }

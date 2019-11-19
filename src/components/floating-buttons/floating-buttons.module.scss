@@ -1,0 +1,132 @@
+@import '../../sass-variables.scss';
+
+.wrapper {
+    z-index: 9999999;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    display: flex;
+    align-items: center;
+    transition: all .2s linear;
+    transition-delay: .2s;
+    // background-color: red;
+    // display: flex;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.wrapperHome {
+    transform: scale(2);
+    // width: 100%;
+    bottom: 20%;
+    right: 20%;
+    composes: wrapper;
+    // background-color: blue;
+}
+
+.btn {
+    // opacity: .7;
+    position: relative;
+    margin-left: 1em;
+    display: inline-block;
+    z-index: 99;
+    transition: all .2s ease;
+    background-color: #fff;
+    // display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow3;
+    // border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all .2s ease;
+    svg {
+        // fill: $blueGrey;
+        fill: #fff;
+        transition: all .2s ease;
+    }
+    &:hover {
+        opacity: 1;
+        box-shadow: $shadow4;
+        transform: scale(1.2);
+        .btnTooltip {
+            opacity: 1;
+            transform: scale(1);
+            bottom: 120%;
+            right: -1em;
+            width: auto;
+        }
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.postsBtn {
+    composes: btn;
+    background-color: $defaultViewColor;
+    &:hover {
+        // background-color: $defaultViewColor;
+    }
+}
+
+.daylyreportsBtn {
+    composes: btn;
+    background-color: $dailyReportsColor;
+    &:hover {
+        // background-color: $dailyReportsColor;
+    }
+}
+
+.pushmessagesBtn {
+    composes: btn;
+    background-color: $pushMessagesColor;
+    &:hover {
+            // background-color: $pushMessagesColor;
+    }
+}
+
+
+
+.settingsBtn {
+    composes: btn;
+    opacity: 1;
+    width: 3.3em;
+    height: 3.3em;
+    background-color: $red;
+    svg {
+        fill: #fff;
+        width: 2.3em;
+    }
+    &:hover {
+        svg {
+            transform: rotate(180deg);
+            // fill: $red;
+        }
+        .btnTooltip {
+            right: 0;
+        }
+    }
+    
+}
+
+.btnTooltip {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: right center;
+    transition: all .2s ease;
+    font-size: .8em;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 1em;
+    background-color: $blueGrey;
+    color: #fff;
+    padding: .5em 1em;
+    border-radius: .3em;
+    white-space: nowrap;
+    text-align: center;
+}

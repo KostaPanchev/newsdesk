@@ -1,0 +1,36 @@
+@import '../../../sass-variables.scss';
+
+
+.btn {
+    display: inline-block;
+    border: 1px solid $blueGrey;
+    border-radius: 1em;
+    width: 85px;
+    text-align: center;
+    line-height: 25px;
+    margin-left: .8rem;
+    margin-bottom: .5em;
+    appearance: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    transition: all .2s ease;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+.primary {
+    composes: btn;
+    background-color: $blueGrey;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #fff;
+    color: $blueGrey;
+    composes: btn;
+}

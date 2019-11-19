@@ -1,0 +1,99 @@
+@import '../../../sass-variables.scss';
+
+.overlay {
+    z-index: 999999999999;
+    background-color: rgba(73, 73, 73, 0.479);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.overlayActive {
+    composes: overlay;
+    opacity: 1;
+    .modal {
+        top: 0px;
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}
+
+.modal {
+    // padding: 2em;
+    width: 95%;
+    max-width: 750px;
+    max-height: 95vh;
+    height: auto;
+    background-color: #fff;
+    top: 70vh;
+    transition: all .2s ease-in-out;
+    border-radius: .3em;
+    /* transition-delay: .1s; */
+    /* transform: scale(0.7); */
+    opacity: .5;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+.modalBig {
+    composes: modal;
+    max-width: 1200px;
+}
+
+.header {
+    
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 1em;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.headerTitle {
+    
+}
+
+.body {
+    overflow: auto;
+    padding: 4em;
+    height: auto !important;
+    max-height: calc(100vh - 50px) !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.footer {
+    /* position: absolute; */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.closeBtn {
+    font-weight: 500;
+    font-size: 1.1em;
+    // background-color: red;
+    display: inline-block;
+    padding: .5em 1em;
+    transition: all .2s ease;
+    cursor: pointer;
+    // color: $mainColor;
+    // &:hover {
+        // transform: scale(1.1);
+    // }
+    svg {
+        width: 1.2em;
+        fill: #fff;
+    }
+}
+

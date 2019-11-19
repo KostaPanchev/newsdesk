@@ -1,0 +1,25 @@
+@import 'input-range-variables';
+@import 'input-range-slider';
+@import 'input-range-label';
+@import 'input-range-label-container';
+@import 'input-range-track';
+
+.range-wrapper {
+  background-color: #fff;
+  padding: .5em;
+
+  border-radius: .3em;
+}
+.range-input-wrapper {
+  padding: .5em;
+  padding-top: 1em;
+  // border: 1px solid $bgColor;
+  
+
+}
+
+.input-range {
+  height: $input-range-slider-height;
+  position: relative;
+  width: 100%;
+}

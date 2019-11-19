@@ -1,0 +1,25 @@
+@import '../../sass-variables.scss';
+
+.loaderWrapper {
+    padding: 3em;
+    text-align: center;
+    width: 100%;
+    // height: 100vh;
+    margin: 0 auto;
+    font-weight: 300;
+    // background-color: $defaultViewColor;
+}
+
+.title {
+  display: inline-block;
+    font-size: 25px;
+    color: $defaultViewColor;
+    font-weight: 500;
+    letter-spacing: 0.46px;
+}
+
+.subTitle {
+  font-size: .9rem;
+  margin-top: .2rem;
+  font-weight: 300;
+}

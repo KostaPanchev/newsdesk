@@ -1,0 +1,111 @@
+@import '../sass-variables.scss';
+
+.userSettingsLoader {
+    padding-top: 10rem;
+}
+
+.pageTransitionLoader {
+    margin: 5em auto;
+}
+
+.appBody {
+    padding-top: 5em;
+}
+
+
+
+.prevNextBtns {
+    display: inline-block;
+    position: fixed;
+    top: 40%;
+    // width: 1em;
+    // height: 2em;
+    color: #fff;
+    // box-shadow: $shadow2;
+    display: flex;
+    height: 3em;
+    align-items: center;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: all .2s ease;
+    z-index: 999;
+    svg {
+        fill: #fff;
+        width: 2em;
+        position: relative;
+    }
+    &:before {
+        font-size: .8rem;
+        width: 5rem;
+        text-align: center;
+        display: inline-block;
+        background-color: $blueGrey;
+        padding: .4rem .3rem;
+        position: absolute;
+        top: 3.5rem;
+        transition: all .2s ease;
+    }
+}
+
+// .prevNextBtnTooltips {
+//     background-color: red;
+//     position: absolute;
+//     top: 3.5rem;
+// }
+
+.prevBtn {
+    composes: prevNextBtns;
+    left: -2em;
+    padding-left: 1.5em;
+    
+    svg {
+        left: .2em;
+    }
+    &:before {
+        content: 'I går';
+        left: -5rem;
+    }
+    &:hover {
+        padding-right: .5em;
+        left: -1.5em;
+        &:before {
+            left: 1rem;
+        }
+    }
+
+}
+
+
+
+
+.nextBtn {
+    composes: prevNextBtns;
+    right: -2em;
+    padding-right: 1.5em;
+    svg {
+        right: .2em;
+    }
+    &:before {
+        content: 'I morgen';
+        right: -5rem;
+    }
+    &:hover {
+        padding-left: .5em;
+        right: -1.5em;
+        &:before {
+            right: 1rem;
+        }
+    }
+
+}
+
+// .prevBtnTooltim {
+//     composes: prevNextBtnTooltips;
+//     left: -2rem;
+//     width: auto;
+// }
+
+
+// .nextBtnTooltim {
+//     composes: prevNextBtnTooltips
+// }

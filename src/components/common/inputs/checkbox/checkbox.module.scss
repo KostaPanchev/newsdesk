@@ -1,0 +1,47 @@
+@import '../../../../sass-variables.scss';
+
+.checkbox {
+    position: absolute;
+    left: -9999px;
+    &+label {
+        font-size: 14px;
+        position: relative;
+        padding-left: 20px;
+        color: $blueGrey;
+        cursor: pointer;
+        // line-height: 20px;
+        display: inline-block;
+    }
+
+    &+label:before {
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        left: 0;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $blueGrey;
+        background: #fff;
+    }
+
+    &+label:after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background: $blueGrey;
+        position: absolute;
+        top: 7px;
+        left: 2px;
+        transition: all 0.2s ease;
+    }
+    &:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+    &:checked + label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../sass-variables.scss';
+
+.inner {
+    font-weight: 300;
+    margin-top: 2em;
+    color: $bodyColor;
+    padding: 5em 3em;
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: $shadow1;
+    line-height: 1.7;
+    font-size: 25px;
+    text-align: center;
+}
+
+.downloadBtn {
+    display: inline-block;
+    background-color: $blue;
+    padding: .5em 2em;
+    margin-top: 2em;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: $shadow1;
+    font-size: 17px;
+    &:hover {
+        background-color: lighten($blue, 10%);
+    }
+}

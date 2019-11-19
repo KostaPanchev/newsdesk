@@ -1,0 +1,64 @@
+@import '../../../sass-variables.scss';
+
+
+.form {
+    label {
+        font-size: .9rem;
+        color: $blueGrey;
+        margin-bottom: .3rem;
+    }
+    textarea {
+        padding: .5em;
+        border-radius: .3em;
+        min-height: 6em;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+.footer {
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3.5rem;
+}
+.footerInner {
+    width: 100%;
+    // background-color: green;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $bgColor;
+    padding: 1.5rem 0 .5rem 0;
+}
+.formWarning {
+    // background-color: blue;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    color: $blueGrey;
+    svg {
+        width: 1.2rem;
+        margin-right: 1rem;
+        fill: $blueGrey;
+    }
+}
+
+.formWarnText {
+
+    font-size: 13px;
+    letter-spacing: 0.63px;
+    line-height: 17px;
+}
+
+.buttons {
+    // background-color: red;
+    // padding-top: 1.5rem;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // margin-top: 2em;
+}

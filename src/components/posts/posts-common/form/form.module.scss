@@ -1,0 +1,100 @@
+@import '../../../../sass-variables.scss';
+
+.form {
+    background-color: #fff;
+    box-shadow: $shadow1;
+
+    label {
+        display: block;
+        color: $blueGrey;
+        font-size: .8em;
+        margin-bottom: .2em;
+        span {
+            display: inline-block;
+            margin-left: .2em;
+        }
+    }
+}
+
+
+.header {
+    background-color: $createdCardColor;
+    display: flex;
+    padding: .7em 2rem;
+    select, input {
+        font-size: .9em;
+    }
+    input {
+        // background-color: transparent;
+        border: 1px solid #fff;
+        padding: .1em;
+        border-radius: .3em;
+        
+
+        // color: #fff;
+        // font-size: 1em;
+        &:first-child {
+            margin-right: 1em;
+        }
+    }
+
+    select {
+        position: relative;
+        text-align-last:center;
+        appearance: none;
+        padding: .3em 1em;
+        margin-left: auto;
+        border: none;
+        border-radius: .3em;
+    }
+}
+
+.mainInfo {
+    background-color: $bgColor;
+    position: relative;
+    input[type="text"],
+    textarea[name="description"] {
+        background-color: #fff;
+        border: 1px solid $bgColor;
+        padding: .5em;
+        border-radius: .3em;
+    }
+
+    textarea[name="description"] {
+        height: 9em;
+
+    }
+    &:before{
+        content: '';
+        width: 1px;
+        position: absolute;
+        height: 80%;
+        background-color: #fff;
+        right: 0;
+        top: 10%;
+    }
+}
+
+.options {
+    select {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #fff;
+        margin-bottom: .5em;
+        // appearance: none;
+        &::after {
+            width: 0px;
+        }
+    }
+}
+
+.iconOptions {
+    margin-top: 1em;
+}
+
+.buttons {
+    margin-top: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

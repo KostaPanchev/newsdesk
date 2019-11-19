@@ -1,0 +1,40 @@
+@import '../../../sass-variables.scss';
+
+.loader {
+    text-align: center; 
+    width: auto;
+    // background-color: red;
+}
+.dot {
+    margin-right: 5px;
+    display: inline-block;
+    // vertical-align: middle;
+    width: 5px;
+    height: 5px;
+    // margin: 50px auto;
+    background: $blueGrey;
+    border-radius: 10px;
+    animation: loader 0.5s infinite alternate;
+}
+
+.dot:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes loader {
+  0% {
+  
+    height: 5px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}

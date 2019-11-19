@@ -1,0 +1,160 @@
+@import '../../sass-variables.scss';
+
+.homePage {
+    margin-top: 2em;
+    padding: 0 5em;
+    // margin:0px;
+
+}
+
+.adnimationWrapper {
+    text-align:center;
+    // padding-top:43vh;
+    padding: 2em;
+    // color:#fff;
+    font-size: 2em;
+    font-weight: 100;
+    overflow:hidden;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    animation:bg 5s linear infinite;
+}
+
+.title {
+    font-weight: 100;
+    letter-spacing: .1em;
+    // border-bottom: 1px solid #fff;
+    color: #fff;
+    opacity: .5;
+    font-size: 7em;
+}
+
+
+.droppingTexts {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+    height: 1em;
+    margin-left: .5em;
+    font-size: 1.2em;
+    // vertical-align: -2px;
+    color: #fff;
+  }
+  
+  .droppingTexts > div {
+    color: #fff;
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    position:absolute;
+    font-weight:bold;   
+    // box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+  }
+  
+  .droppingTexts > div:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+  }
+  .droppingTexts > div:nth-child(2) {
+    animation: roll 5s linear infinite 1s;
+  }
+  .droppingTexts > div:nth-child(3) {
+    animation: roll 5s linear infinite 2s;
+  }
+  .droppingTexts > div:nth-child(4) {
+    animation: roll2 5s linear infinite 3s;
+  }
+  
+  @keyframes roll {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    20% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    27% {
+      font-size:0px;
+      opacity:0.5;
+      margin-left:20px;
+      margin-top:100px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+  
+  @keyframes roll2 {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    30% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    37% {
+      font-size:1500px;
+      opacity:0;
+      margin-left:-1000px;
+      margin-top:-800px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+  
+  @keyframes bg {
+    0% {background: $red;}
+    3% {background: $defaultViewColor}
+    20% {background: $defaultViewColor}
+    23% {background: $dayViewColor}
+    40% {background: $dayViewColor}
+    43% {background: $weekViewColor;}
+    60% {background: $weekViewColor;}
+    63% {background: $red}
+    80% {background: $red}
+    83% {background: $red}
+    100% {background: $red}
+  }

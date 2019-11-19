@@ -1,0 +1,147 @@
+@import '../../../sass-variables.scss';
+
+.publication {
+    border-radius: .3em;
+    background-color: #fff;
+    box-shadow: $shadow1;
+    border: 1px solid $bgColor;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    transition: all .2s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.publicationActive {
+    composes: publication;
+    padding-bottom: 4rem;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17.85px;
+    letter-spacing: 0.68px;
+    font-weight: 400;
+    color: $blueGrey;
+    // padding: .5em 3rem;
+    padding: .7rem 3.5rem;
+    background-color: lighten($blueGrey, 35%);
+    transition: all .2s ease;
+    .rssIcon {
+        transition: all .2s ease;
+        position: absolute;
+        // top: 0;
+        left: 1em;
+        display: inline-block;
+        margin-right: 1em;
+        padding-top: .1rem;
+        svg {
+            width: 1.2rem;
+            fill: $blueGrey;
+        }
+    }
+}
+
+
+
+// .title {
+//     height: 2rem;
+//     font-weight: 500;
+//     font-size: 1.3rem;
+    
+// }
+
+.headerActive {
+    composes: header;
+    background-color: $pushMessagesColor;
+    color: #fff;
+    .rssIcon {
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.body {
+    padding: 2.7rem 3.5rem;
+    display: flex;
+}
+
+.publicationInfo {
+    flex: 1;
+}
+.publicationContent {
+    flex: 1;
+}
+
+.publicationInfo {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // margin-bottom: 2rem;
+}
+.publicationInfoTitle {
+    margin-bottom: .5rem;
+    font-size: 18px;
+    letter-spacing: 0.87px;
+    font-weight: bold;
+    color: $blueGrey;
+}
+
+.titleWrapper {
+    margin-right: 1em;
+}
+
+
+
+.subTitle {
+    font-size: .8rem;
+    color: $blueGrey;
+    font-weight: 300;
+}
+
+.messages {
+    // display: flex;
+}
+
+.message {
+    // flex: 1;
+    // &:first-child {
+    //     margin-right: 2em;
+    // }
+}
+
+.messageText {
+    padding: .5em;
+    cursor: pointer;
+    background-color: $bgColor;
+    border-radius: .3em;
+    min-height: 6em;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 2em;
+}
+
+.publicationLabel {
+    font-size: .9rem;
+        color: $blueGrey;
+        margin-bottom: .3rem;
+}
+
+// .buttons {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     margin-top: 2em;
+//     p {
+//         font-size: .8em;
+//         color: $blueGrey;
+//         font-weight: 300;
+//         margin-right: 2em;
+//     }
+// }

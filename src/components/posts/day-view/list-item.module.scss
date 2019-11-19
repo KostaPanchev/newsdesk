@@ -1,0 +1,51 @@
+@import '../../../sass-variables.scss';
+
+.timelineItem {
+    background-color: #fff;
+    margin-bottom: 1px;
+    // padding: 1em .5em;
+    display: flex;
+    &:nth-child(odd){
+        background-color: lighten($bgColor, 5%);
+    }
+}
+
+.time {
+    border-right: 1px solid $bgColor;
+    flex-basis: 80px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    // text-align: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    padding: .3em;
+    color: $blueGrey;
+    // background-color: #fff;
+    margin-right: .5em;
+    padding: 1em;
+}
+
+.body {
+    flex: 1;
+    padding: .5em;
+}
+
+.cardsList {
+    flex: 1;
+
+}
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    cursor: pointer;
+    &:hover {
+        background-color: $bgColor;
+    }
+    svg {
+        fill: $bgColor;
+    }
+}

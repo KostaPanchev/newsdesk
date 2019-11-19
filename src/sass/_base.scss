@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: $bgColor;
+    color: $bodyColor;
+    min-height: 100vh;
+    padding-bottom: 10rem;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin:  0 auto;
+}
+
+
+
+.force-show-scrollbars::-webkit-scrollbar-track:vertical {
+    border-left: 1px solid #E7E7E7;
+    box-shadow: 1px 0 1px 0 #F6F6F6 inset, -1px 0 1px 0 #F6F6F6 inset;
+}
+
+.force-show-scrollbars::-webkit-scrollbar-track:horizontal {
+    border-top: 1px solid #E7E7E7;
+    box-shadow: 0 1px 1px 0 #F6F6F6 inset, 0 -1px 1px 0 #F6F6F6 inset;
+}
+
+.force-show-scrollbars::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: #FAFAFA;
+    width: 16px;
+}
+
+.force-show-scrollbars::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: #C1C1C1;
+    border-color: transparent;
+    border-radius: 9px 8px 8px 9px;
+    border-style: solid;
+    border-width: 3px 3px 3px 4px; /* Workaround because margins aren't supported */
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Unfortunately scrollbars can't use CSS transitions. Also, it's not possible
+   to highlight the thumb when the scrollbar track is hovered without some
+   JavaScript acrobatics; https://jsfiddle.net/QcqBM/6/ is a start, but you
+   also have to check whether the element has a scrollbar and if so how wide
+   it is. */
+.force-show-scrollbars::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.svg-icon {
+    fill: $bodyColor;
+    width: 1em;
+}
+
+.homeColor {
+    background-color: $blueGrey;
+}
+
+.defaultViewColor {
+    background-color: $defaultViewColor;
+}
+
+.dayVewColor {
+    background-color: $dayViewColor;
+}
+
+.weekViewColor {
+    background-color: $weekViewColor;
+}
+
+.dailyreportsColor {
+    background-color: $dailyReportsColor;
+}
+
+.pushmessagesColor {
+    background-color: $pushMessagesColor;
+}

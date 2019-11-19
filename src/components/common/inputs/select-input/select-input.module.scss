@@ -1,0 +1,45 @@
+@import '../../../../sass-variables.scss';
+
+
+.selectField {
+    display: flex;
+    select {
+        width: 100%;
+        flex: 1;
+    }
+    
+    // span {
+    //     flex-shrink: 0;
+    //     width: 1em;
+    //     text-align: center;
+    // }
+    select {
+        // appearance: none;
+        font-size: .9em;
+        padding: .5em 1em;
+        border-radius: .3em;
+        option {
+            // font-size: 1.2em;
+
+            &:disabled {
+                color: red;
+            }
+        }
+    }
+    select:invalid+span::after {
+        display: inline-block;
+        content: '*';
+        color: red;
+    }
+    select:valid {
+        // background-color: #ddffdd;
+    }
+
+    // select:valid+span::after {
+    //     color: green;
+    //     content: 'ok';
+    // }
+    //}
+}
+
+

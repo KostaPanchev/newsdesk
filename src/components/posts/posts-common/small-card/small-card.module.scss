@@ -1,0 +1,232 @@
+@import '../../../../sass-variables.scss';
+
+.card {
+    border-radius: .3em;
+    overflow: hidden;
+    z-index: 1;
+    // background-color: red;
+    margin-bottom: .5em;
+    // border: 1px solid $bgColor;
+    font-size: .8em;
+    transition: all .1s ease;
+    position: relative;
+    background-color: $bgColor;
+    &:hover {
+        z-index: 2;
+        box-shadow: $shadow4;
+        transform: scale(1.2);
+        // background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+.cardPublihed {
+    composes: card;
+    opacity: .4 ;
+    &:hover {
+        opacity: .8;
+    }
+}
+
+
+.header {
+    display: flex;
+    text-align: center;
+    font-size: .9em;
+    background-color: $blueGrey;
+    padding: .4rem .7rem;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    .queckInfoIcon {
+        background-color: #fff;
+    }
+}
+
+.createdCardHeader {
+    composes: header;
+    background-color: $createdCardColor;
+}
+
+.importedCardHeader {
+    composes: header;
+    background-color: $importedCardColor;
+}
+
+.importedIcon {
+    fill: #fff;
+    width: 1em;
+    display: inline-block;
+}
+
+.time {
+    margin-left: .5em;
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.categoryTitle {
+    line-height: 1.2;
+    margin-right: auto;
+    font-size: .7rem;
+}
+
+.quickInfo {
+    margin-left: 1em;
+    // padding: 1em;
+    display: flex;
+    width: auto;
+}
+
+.queckInfoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-weight: 700;
+    // border-radius: 100%;
+    text-align: center;
+    border-radius: 100%;
+
+}
+
+.priority {
+    composes: queckInfoIcon;
+    color: #5DA91A;
+    font-size: 1.1em;
+}
+
+.priority-1 {
+    composes: priority;
+    color: #AA061A;
+}
+.priority-2 {
+    composes: priority;
+    color: #AA061A;
+}
+.priority-3 {
+    composes: priority;
+    color: #AA061A;
+}
+.priority-4 {
+    composes: priority;
+    color: #E67B02;
+}
+.priority-5 {
+    composes: priority;
+    color: #E67B02;
+}
+.priority-6 {
+    composes: priority;
+    color: #5DA91A;
+}
+.priority-7 {
+    composes: priority;
+    color: #5DA91A;
+}
+.priority-8 {
+    composes: priority;
+    color: #5DA91A;
+}
+.priority-9 {
+    composes: priority;
+    color: #5DA91A;
+}
+
+.locked {
+    composes: queckInfoIcon;
+    background-color: $blueGrey;
+    font-weight: bold;
+    position: relative;
+    svg {
+        width: 1.3em;
+        fill: #fff;
+    }
+}
+
+.isAuthor {
+    composes: queckInfoIcon;
+    background-color: $blueGrey;
+    svg {
+        width: 1.1em;
+        fill: #fff;
+    }
+}
+
+.note {
+    composes: queckInfoIcon;
+    svg {
+        width: 1.2em;
+        fill: $mainColor;
+    }
+
+}
+
+.warnIcon {
+    composes: queckInfoIcon;
+    position: relative;
+    svg {
+        transform: scale(1.25);
+        width: 100%;
+        fill: #D0021B;
+    }
+}
+
+.cardBody {
+    position: relative;
+    padding: .5em 1em 2em 1em;
+    position: relative;
+
+}
+
+.createdCardBody {
+    composes: cardBody;
+    // -webkit-clip-path: polygon(100% 0, 100% 60%, 80% 100%, 0 100%, 0 0);
+    // clip-path: polygon(100% 0, 100% 60%, 80% 100%, 0 100%, 0 0);
+
+    // &::after {
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 0;
+    //     content: '';
+    //     width: 0;
+    //     height: 0;
+    //     border-bottom: 25px solid #fff;
+    //     border-left: 25px solid transparent;
+    //   }
+}
+
+.importedCardBody {
+    composes: cardBody;
+    // -webkit-clip-path: polygon(100% 0, 100% 60%, 80% 100%, 0 100%, 0 0);
+
+}
+
+.postTitle {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.postDesc {
+    font-size: .9em;
+}
+
+.footer {
+    background-color: darken($bgColor, 5%);
+    padding: 0 .7rem;
+    justify-content: flex-end;
+    display: flex;
+    .queckInfoIcon {
+        // background-color: $blueGrey;
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+        margin-left: .4rem;
+    }
+    .isAuthor {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+

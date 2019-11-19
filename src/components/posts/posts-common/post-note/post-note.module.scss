@@ -1,0 +1,51 @@
+@import '../../../../sass-variables.scss';
+
+.postNote {
+    background-color: rgba($mainColor, .2);
+    padding: .4rem;
+    // box-shadow: $shadow1;
+    margin-bottom: .5rem;
+    border-radius: 3px;
+}
+
+.noteText {
+    font-size: 14px;
+    
+    font-style: italic;
+    font-weight: 300;
+    display: block;
+    padding: .3rem;
+    white-space: pre-wrap;
+    padding-bottom: .3rem;
+    min-height: 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.411);
+    }
+}
+
+.noteTextarea {
+    height: 8rem;
+    font-size: 12px;
+    padding: .3rem;
+    font-style: italic;
+    font-weight: 300;
+    width: 100%;
+    border: none;
+    appearance: none;
+    &:focus {
+        outline-width: 2px;
+    }
+}
+
+.updatedBy {
+    padding: .3rem;
+    padding-top: .2rem;
+    font-size: 11px;
+    font-weight: 300;
+    color: $blueGrey;
+    span {
+        font-weight: 400;
+    }
+}
+
